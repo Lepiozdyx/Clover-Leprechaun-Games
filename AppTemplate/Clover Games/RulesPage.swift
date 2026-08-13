@@ -2,7 +2,7 @@ import SwiftUI
 import WebKit
 
 // Обертка для WKWebView
-struct WebView: UIViewRepresentable {
+struct HTMLWebView: UIViewRepresentable {
     var htmlFileName: String
     
     func makeUIView(context: Context) -> WKWebView {
@@ -22,7 +22,7 @@ struct RulesPage: View {
 
     var body: some View {
         ZStack {
-            WebView(htmlFileName: "rules")
+            HTMLWebView(htmlFileName: "rules")
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
